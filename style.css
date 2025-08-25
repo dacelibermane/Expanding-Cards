@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  /*when class active change to 5 as at the starting position all images are of equal size*/
+  flex: 0.05;
+  margin: 10px;
+  /* we will position h3 absolute, therefore we need it's container (.panel) to be relative*/
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  /*we position h3 at the bottom left corner*/
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  /*we want the h3 be seen only when active (when photo is large)*/
+  opacity: 0;
+}
+
+/*if the panel div also has an active class we change the initial size to 5*/
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+/*if the screen is very small, show only 3 of 5 cards*/
+@media (max-width: 480px) {
+  /*remove last 2 panels*/
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
