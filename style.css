@@ -60,6 +60,9 @@ body {
 
 /*if the screen is very small, show only 3 of 5 cards*/
 @media (max-width: 480px) {
+  .panel.active {
+    flex: 1;
+  }
   /*remove last 2 panels*/
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
