@@ -10,15 +10,18 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: #333;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0;
 }
 
-.container {
+.panels {
   display: flex;
+  list-style: none;
   width: 90vw;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
 .panel {
@@ -31,7 +34,7 @@ body {
   color: #fff;
   cursor: pointer;
   /*when class active change to 5 as at the starting position all images are of equal size*/
-  flex: 0.05;
+  flex: 0.1;
   margin: 10px;
   /* we will position h3 absolute, therefore we need it's container (.panel) to be relative*/
   position: relative;
@@ -47,6 +50,7 @@ body {
   margin: 0;
   /*we want the h3 be seen only when active (when photo is large)*/
   opacity: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /*if the panel div also has an active class we change the initial size to 5*/
