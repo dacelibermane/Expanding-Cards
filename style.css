@@ -64,6 +64,27 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
+/* Assign background images via nth-child */
+.panel:nth-child(1) {
+  background-image: url("https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+}
+
+.panel:nth-child(2) {
+  background-image: url("https://images.unsplash.com/photo-1550206574-42cfa61e2a9d?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.panel:nth-child(3) {
+  background-image: url("https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.panel:nth-child(4) {
+  background-image: url("https://images.unsplash.com/photo-1601758124096-1fd661873b95?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.panel:nth-child(5) {
+  background-image: url("https://images.unsplash.com/photo-1556866261-8763a7662333?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
 /*if the screen is very small, show only 3 of 5 cards*/
 @media (max-width: 480px) {
   .panel.active {
